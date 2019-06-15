@@ -12,39 +12,59 @@ public class PlayerController : MonoBehaviour {
 
 	[Header("Dodge")]
 	public float DodgeForce = 2f;
-	public float DodgeCooldown = 2f;
+	public float DodgeCooldownInSeconds = 2f;
+	public int NbDodgesInARaw = 2;
+	public float DodgeDurationInSeconds = 1f;
 
 	[Header("Rotation")]
 	public float MouseSensitivity = 1f;
 
-	private bool canDodge = true;
+	private int nbAvailableDodges;
+	private int nbDodges = 0;
+	private bool IsDodging { get { return nbDodges > 0; } }
 
 	private Rigidbody rb;
+	private Health health;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		rb = GetComponent<Rigidbody>();
 		if (rb == null)
 		{
 			Debug.LogError("No rigid body found in player!");
 		}
+
+		health = GetComponent<Health>();
+
+		resetNbDodges();
 	}
-	
+
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
+		if (health != null && health.IsDead)
+		{
+			return;
+		}
+
 		UpdatePosition();
 		UpdateRotation();
 	}
 
 	void Update()
 	{
+		if (health != null && health.IsDead)
+		{
+			return;
+		}
+
 		if (Input.GetButtonDown("UTurn"))
 		{
 			DoUTurn();
 		}
 
-		if (canDodge)
+		if (nbAvailableDodges > 0)
 		{
 			UpdateDodge();
 		}
@@ -68,9 +88,12 @@ public class PlayerController : MonoBehaviour {
 
 		if (dodgeUsed)
 		{
-			// TODO make we can use dodge twice
-			canDodge = false;
-			StartCoroutine(dodgeCooldown(DodgeCooldown));
+			nbAvailableDodges--;
+			nbDodges++;
+			health.IsInvincible = true;
+
+			StartCoroutine(dodgeCooldown(DodgeCooldownInSeconds));
+			StartCoroutine(stopDodge(DodgeDurationInSeconds));
 		}
 	}
 
@@ -110,6 +133,22 @@ public class PlayerController : MonoBehaviour {
 	private IEnumerator dodgeCooldown(float delay)
 	{
 		yield return new WaitForSeconds(delay);
-		canDodge = true;
+		nbAvailableDodges++;
+	}
+
+	private IEnumerator stopDodge(float delay)
+	{
+		yield return new WaitForSeconds(delay);
+		nbDodges--;
+
+		if (health != null && nbDodges <= 0)
+		{
+			health.IsInvincible = false;
+		}
+	}
+
+	private void resetNbDodges()
+	{
+		nbAvailableDodges = NbDodgesInARaw;
 	}
 }

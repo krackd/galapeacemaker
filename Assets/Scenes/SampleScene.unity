@@ -2183,8 +2183,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114041427606159624, guid: bbbc0c97742e49149bab46ce3576e133,
         type: 2}
-      propertyPath: DodgeForce
-      value: 100
+      propertyPath: DodgeCooldownInSeconds
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbbc0c97742e49149bab46ce3576e133, type: 2}
@@ -2784,6 +2784,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1533298879152660, guid: bbbc0c97742e49149bab46ce3576e133,
     type: 2}
   m_PrefabInternal: {fileID: 1475843498}
+--- !u!114 &1990397613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1990397608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4132e4126f03540a8cf6842825645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHP: 100
+  IsInvincible: 0
 --- !u!1001 &1999281867
 Prefab:
   m_ObjectHideFlags: 0

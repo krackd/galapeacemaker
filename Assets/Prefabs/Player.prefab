@@ -1743,6 +1743,8 @@ MonoBehaviour:
   StrafeForce: 10
   MaxStrafeVelocity: 200
   MaxMoveVelocity: 200
+  DodgeForce: 100
+  DodgeCooldown: 2
   MouseSensitivity: 3
 --- !u!114 &114466901503486470
 MonoBehaviour:
