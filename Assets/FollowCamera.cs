@@ -38,8 +38,8 @@ public class FollowCamera : MonoBehaviour
 	private void UpdateOffset()
 	{
 		float v = Mathf.Abs(Input.GetAxis("Vertical"));
-		float h = Mathf.Abs(Input.GetAxis("Horizontal"));
-		float z = Mathf.Clamp01(v + h);
+		float h = Input.GetAxis("Horizontal");
+		float z = Mathf.Clamp01(Mathf.Abs(v) + Mathf.Abs(h));
 		Vector3 offsetTarget = new Vector3(MaxOffset.x * h, MaxOffset.y * v, MaxOffset.z * z);
 		float smoothSpeed = z < 0.5f ? OffsetSmoothSpeedDown : OffsetSmoothSpeedUp;
 		offset = Vector3.Lerp(offset, offsetTarget, smoothSpeed * Time.deltaTime * 1000);

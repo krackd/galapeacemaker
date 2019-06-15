@@ -2969,6 +2969,11 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1990397608}
+    - target: {fileID: 114399383501764132, guid: a1a596a09ca363640aa3608f2320ed63,
+        type: 2}
+      propertyPath: MaxOffset.x
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a596a09ca363640aa3608f2320ed63, type: 2}
   m_IsPrefabAsset: 0
