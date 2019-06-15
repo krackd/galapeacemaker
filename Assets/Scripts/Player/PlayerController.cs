@@ -3,12 +3,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+	#region Component Data
+
 	[Header("Movement")]
 	public float MoveForce = 20f;
 	public float StrafeForce = 10f;
+	public float MaxStrafeVelocity = 200;
+	public float MaxMoveVelocity = 200;
+	public float SpeedUpFactor = 2f;
 
-	public float MaxStrafeVelocity = 100;
-	public float MaxMoveVelocity = 100;
+	[Header("Rotation")]
+	public float MouseSensitivity = 1f;
 
 	[Header("Dodge")]
 	public float DodgeForce = 2f;
@@ -16,15 +21,32 @@ public class PlayerController : MonoBehaviour {
 	public int NbDodgesInARaw = 2;
 	public float DodgeDurationInSeconds = 1f;
 
-	[Header("Rotation")]
-	public float MouseSensitivity = 1f;
+	[Header("UTurn")]
+	public float UTurnCooldown = 5f;
+	public int NbUTurnsInARaw = 1;
 
+	#endregion
+
+	#region Properties
+
+	private bool IsDead { get { return health != null && health.IsDead; } }
+	private bool CanDodge { get { return nbAvailableDodges > 0; } }
+	private bool IsDodging { get { return nbDodges > 0; } }
+	private bool CanUTurn { get { return nbAvailableUTurns > 0; } }
+
+	#endregion
+
+	#region Private fields
+
+	private int nbAvailableUTurns;
 	private int nbAvailableDodges;
 	private int nbDodges = 0;
-	private bool IsDodging { get { return nbDodges > 0; } }
 
 	private Rigidbody rb;
+	private Collider[] colliders;
 	private Health health;
+
+	#endregion
 
 	// Use this for initialization
 	void Start ()
@@ -35,40 +57,83 @@ public class PlayerController : MonoBehaviour {
 			Debug.LogError("No rigid body found in player!");
 		}
 
+		colliders = GetComponents<Collider>();
+
 		health = GetComponent<Health>();
 
-		resetNbDodges();
+		nbAvailableUTurns = NbUTurnsInARaw;
+		nbAvailableDodges = NbDodgesInARaw;
 	}
 
 	// Update is called once per frame
-	void FixedUpdate ()
+	void FixedUpdate()
 	{
-		if (health != null && health.IsDead)
+		if (IsDead)
 		{
 			return;
 		}
 
-		UpdatePosition();
+		UpdateVelocity();
 		UpdateRotation();
 	}
 
 	void Update()
 	{
-		if (health != null && health.IsDead)
+		if (IsDead)
 		{
 			return;
 		}
 
-		if (Input.GetButtonDown("UTurn"))
+		UpdateSpeedUp();
+
+		if (CanUTurn)
 		{
-			DoUTurn();
+			UpdateUTurn();
 		}
 
-		if (nbAvailableDodges > 0)
+		if (CanDodge)
 		{
 			UpdateDodge();
 		}
 
+	}
+
+	private void UpdateSpeedUp()
+	{
+		if (Input.GetButtonDown("SpeedUp"))
+		{
+			MoveForce *= SpeedUpFactor;
+			StrafeForce *= SpeedUpFactor;
+			MaxMoveVelocity *= SpeedUpFactor;
+			MaxStrafeVelocity *= SpeedUpFactor;
+
+			foreach (Collider collider in colliders)
+			{
+				collider.isTrigger = true;
+			}
+		}
+		else if (Input.GetButtonUp("SpeedUp"))
+		{
+			MoveForce /= SpeedUpFactor;
+			StrafeForce /= SpeedUpFactor;
+			MaxMoveVelocity /= SpeedUpFactor;
+			MaxStrafeVelocity /= SpeedUpFactor;
+
+			foreach (Collider collider in colliders)
+			{
+				collider.isTrigger = false; // TODO remove trigger if no collision
+			}
+		}
+	}
+
+	private void UpdateUTurn()
+	{
+		if (Input.GetButtonDown("UTurn"))
+		{
+			DoUTurn();
+			nbAvailableUTurns--;
+			StartCoroutine(uturnCooldown(UTurnCooldown));
+		}
 	}
 
 	private void UpdateDodge()
@@ -107,7 +172,7 @@ public class PlayerController : MonoBehaviour {
 		transform.RotateAround(transform.position, transform.forward, 180);
 	}
 
-	private void UpdatePosition()
+	private void UpdateVelocity()
 	{
 		float v = Input.GetAxis("Vertical");
 		float h = Input.GetAxis("Horizontal");
@@ -126,8 +191,13 @@ public class PlayerController : MonoBehaviour {
 	private void UpdateRotation()
 	{
 		float mouseX = Input.GetAxis("Mouse X");
-		//Quaternion rot = Quaternion.Euler(0, 0, mouseY * MouseSensitivity);
 		transform.RotateAround(transform.position, transform.forward, -mouseX * MouseSensitivity);
+	}
+
+	private IEnumerator uturnCooldown(float delay)
+	{
+		yield return new WaitForSeconds(delay);
+		nbAvailableUTurns++;
 	}
 
 	private IEnumerator dodgeCooldown(float delay)
@@ -145,10 +215,5 @@ public class PlayerController : MonoBehaviour {
 		{
 			health.IsInvincible = false;
 		}
-	}
-
-	private void resetNbDodges()
-	{
-		nbAvailableDodges = NbDodgesInARaw;
 	}
 }
