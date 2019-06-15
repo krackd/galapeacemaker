@@ -1758,6 +1758,7 @@ MonoBehaviour:
   LaserPrefab: {fileID: 1272743295762244, guid: 880f5882438076647a0965a6f47d2cdf,
     type: 2}
   Damage: 25
+  FireCoolDown: 0.3
 --- !u!114 &114547527755895368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1772,3 +1773,4 @@ MonoBehaviour:
   LaserPrefab: {fileID: 1272743295762244, guid: 880f5882438076647a0965a6f47d2cdf,
     type: 2}
   Damage: 25
+  FireCoolDown: 0.3

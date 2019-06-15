@@ -7,6 +7,10 @@ public class Weapon : MonoBehaviour {
 	public GameObject LaserPrefab;
 	public int Damage = 25;
 
+	public float FireCoolDown = 0.3f;
+
+	private bool canFire = true;
+
 	// Use this for initialization
 	void Start () {
 		if (LaserPrefab == null)
@@ -17,18 +21,31 @@ public class Weapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Fire1") && LaserPrefab != null)
+		if (Input.GetButton("Fire1") && canFire && LaserPrefab != null)
 		{
-			GameObject laser = Instantiate(LaserPrefab);
-			laser.transform.position = transform.position;
-			Quaternion rot = Quaternion.FromToRotation(Vector3.up, transform.up);
-			laser.transform.rotation = rot;
-
-			Projectile projectile = laser.GetComponent<Projectile>();
-			if (projectile != null)
-			{
-				projectile.Damage = Damage;
-			}
+			DoFire();
+			canFire = false;
+			StartCoroutine(fireCooldown(FireCoolDown));
 		}
+	}
+
+	private void DoFire()
+	{
+		GameObject laser = Instantiate(LaserPrefab);
+		laser.transform.position = transform.position;
+		Quaternion rot = Quaternion.FromToRotation(Vector3.up, transform.up);
+		laser.transform.rotation = rot;
+
+		Projectile projectile = laser.GetComponent<Projectile>();
+		if (projectile != null)
+		{
+			projectile.Damage = Damage;
+		}
+	}
+
+	private IEnumerator fireCooldown(float delay)
+	{
+		yield return new WaitForSeconds(delay);
+		canFire = true;
 	}
 }
