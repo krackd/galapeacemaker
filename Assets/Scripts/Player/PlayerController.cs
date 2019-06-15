@@ -28,7 +28,10 @@ public class PlayerController : MonoBehaviour {
 	{
 		UpdatePosition();
 		UpdateRotation();
+	}
 
+	void Update()
+	{
 		if (Input.GetButtonDown("UTurn"))
 		{
 			transform.RotateAround(transform.position, transform.forward, 180);
