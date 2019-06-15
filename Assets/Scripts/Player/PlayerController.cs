@@ -1,16 +1,23 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+	[Header("Movement")]
 	public float MoveForce = 20f;
 	public float StrafeForce = 10f;
 
 	public float MaxStrafeVelocity = 100;
 	public float MaxMoveVelocity = 100;
 
+	[Header("Dodge")]
+	public float DodgeForce = 2f;
+	public float DodgeCooldown = 2f;
+
+	[Header("Rotation")]
 	public float MouseSensitivity = 1f;
+
+	private bool canDodge = true;
 
 	private Rigidbody rb;
 
@@ -34,8 +41,47 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (Input.GetButtonDown("UTurn"))
 		{
-			transform.RotateAround(transform.position, transform.forward, 180);
+			DoUTurn();
 		}
+
+		if (canDodge)
+		{
+			UpdateDodge();
+		}
+
+	}
+
+	private void UpdateDodge()
+	{
+		bool dodgeUsed = false;
+
+		if (Input.GetButtonDown("DodgeLeft"))
+		{
+			DoDodge(-transform.right);
+			dodgeUsed = true;
+		}
+		else if (Input.GetButtonDown("DodgeRight"))
+		{
+			DoDodge(transform.right);
+			dodgeUsed = true;
+		}
+
+		if (dodgeUsed)
+		{
+			// TODO make we can use dodge twice
+			canDodge = false;
+			StartCoroutine(dodgeCooldown(DodgeCooldown));
+		}
+	}
+
+	private void DoDodge(Vector3 dir)
+	{
+		rb.AddForce(dir.normalized * DodgeForce, ForceMode.Impulse);
+	}
+
+	private void DoUTurn()
+	{
+		transform.RotateAround(transform.position, transform.forward, 180);
 	}
 
 	private void UpdatePosition()
@@ -59,5 +105,11 @@ public class PlayerController : MonoBehaviour {
 		float mouseX = Input.GetAxis("Mouse X");
 		//Quaternion rot = Quaternion.Euler(0, 0, mouseY * MouseSensitivity);
 		transform.RotateAround(transform.position, transform.forward, -mouseX * MouseSensitivity);
+	}
+
+	private IEnumerator dodgeCooldown(float delay)
+	{
+		yield return new WaitForSeconds(delay);
+		canDodge = true;
 	}
 }
