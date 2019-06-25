@@ -6,6 +6,8 @@ public class FollowCamera : MonoBehaviour
 	public float TranslationSmoothTime = 0.1f;
 	public float RotationSpeed = 0.1f;
 
+	[Header("Smooth Offset")]
+	public bool EnableSmoothOffset = false;
 	public Vector3 MaxOffset = Vector3.zero;
 	private Vector3 offset = Vector3.zero;
 	public float OffsetSmoothSpeedUp = 0.005f;
@@ -37,12 +39,15 @@ public class FollowCamera : MonoBehaviour
 
 	private void UpdateOffset()
 	{
-		float v = Mathf.Abs(Input.GetAxis("Vertical"));
-		float h = Input.GetAxis("Horizontal");
-		float z = Mathf.Clamp01(Mathf.Abs(v) + Mathf.Abs(h));
-		Vector3 offsetTarget = new Vector3(MaxOffset.x * h, MaxOffset.y * v, MaxOffset.z * z);
-		float smoothSpeed = z < 0.5f ? OffsetSmoothSpeedDown : OffsetSmoothSpeedUp;
-		offset = Vector3.Lerp(offset, offsetTarget, smoothSpeed * Time.deltaTime * 1000);
+		if (EnableSmoothOffset)
+		{
+			float v = Mathf.Abs(Input.GetAxis("Vertical"));
+			float h = Input.GetAxis("Horizontal");
+			float z = Mathf.Clamp01(Mathf.Abs(v) + Mathf.Abs(h));
+			Vector3 offsetTarget = new Vector3(MaxOffset.x * h, MaxOffset.y * v, MaxOffset.z * z);
+			float smoothSpeed = z < 0.5f ? OffsetSmoothSpeedDown : OffsetSmoothSpeedUp;
+			offset = Vector3.Lerp(offset, offsetTarget, smoothSpeed * Time.deltaTime * 1000);
+		}
 	}
 
 	private void UpdatePosition()
