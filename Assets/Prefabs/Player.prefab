@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 114041427606159624}
   - component: {fileID: 65877494107792618}
   - component: {fileID: 54658490357539676}
+  - component: {fileID: 114126597011518912}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1743,9 +1744,32 @@ MonoBehaviour:
   StrafeForce: 10
   MaxStrafeVelocity: 200
   MaxMoveVelocity: 200
-  DodgeForce: 100
-  DodgeCooldown: 2
+  SpeedUpFactor: 2
   MouseSensitivity: 3
+  DodgeForce: 100
+  DodgeCooldownInSeconds: 5
+  NbDodgesInARaw: 2
+  DodgeDurationInSeconds: 1
+  UTurnCooldown: 5
+  NbUTurnsInARaw: 1
+--- !u!114 &114126597011518912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533298879152660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4132e4126f03540a8cf6842825645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxHP: 100
+  IsInvincible: 0
 --- !u!114 &114466901503486470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1759,7 +1783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaserPrefab: {fileID: 1272743295762244, guid: 880f5882438076647a0965a6f47d2cdf,
     type: 2}
-  Damage: 25
+  Damage: 10
   FireCoolDown: 0.3
 --- !u!114 &114547527755895368
 MonoBehaviour:
@@ -1774,5 +1798,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaserPrefab: {fileID: 1272743295762244, guid: 880f5882438076647a0965a6f47d2cdf,
     type: 2}
-  Damage: 25
+  Damage: 10
   FireCoolDown: 0.3

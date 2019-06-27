@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour {
+
+	public UnityEvent OnDeath;
 
 	public int MaxHP = 100;
 	public bool IsInvincible = false;
@@ -14,7 +17,16 @@ public class Health : MonoBehaviour {
 	void Start () {
 		hp = MaxHP;
 	}
-	
+
+	private void OnTriggerEnter(Collider other)
+	{
+		Projectile projectile = other.gameObject.GetComponent<Projectile>();
+		if (projectile != null)
+		{
+			Hurt(projectile.Damage);
+		}
+	}
+
 	public void Hurt(int amount)
 	{
 		if (IsInvincible)
@@ -23,6 +35,7 @@ public class Health : MonoBehaviour {
 		}
 
 		hp = clamp(hp - amount);
+		Debug.Log(gameObject.name + " hp: " + hp);
 		if (IsDead)
 		{
 			Die();
@@ -36,7 +49,7 @@ public class Health : MonoBehaviour {
 
 	public void Die()
 	{
-
+		OnDeath.Invoke();
 	}
 
 	private int clamp(int value)
