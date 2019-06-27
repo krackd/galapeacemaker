@@ -1746,6 +1746,7 @@ MonoBehaviour:
   MaxMoveVelocity: 200
   SpeedUpFactor: 2
   MouseSensitivity: 3
+  JoystickSensitivity: 2
   DodgeForce: 100
   DodgeCooldownInSeconds: 5
   NbDodgesInARaw: 2

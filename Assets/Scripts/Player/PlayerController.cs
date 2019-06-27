@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
 
 	[Header("Rotation")]
 	public float MouseSensitivity = 1f;
+	public float JoystickSensitivity = 1f;
 
 	[Header("Dodge")]
 	public float DodgeForce = 2f;
@@ -190,8 +191,9 @@ public class PlayerController : MonoBehaviour {
 
 	private void UpdateRotation()
 	{
-		float mouseX = Input.GetAxis("Mouse X");
-		transform.RotateAround(transform.position, transform.forward, -mouseX * MouseSensitivity);
+		float angle = -Input.GetAxis("Mouse X") * MouseSensitivity;
+		angle += -Input.GetAxis("JoystickTurn") * JoystickSensitivity;
+		transform.RotateAround(transform.position, transform.forward, angle);
 	}
 
 	private IEnumerator uturnCooldown(float delay)

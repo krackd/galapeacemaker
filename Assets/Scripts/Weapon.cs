@@ -21,7 +21,10 @@ public class Weapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButton("Fire1") && canFire && LaserPrefab != null)
+		bool isFireButton = Input.GetButton("Fire1");
+		bool isFireTrigger = Input.GetAxis("Fire1Trigger") < 0;
+		bool isFire = isFireButton || isFireTrigger;
+		if (isFire && canFire && LaserPrefab != null)
 		{
 			DoFire();
 			canFire = false;
