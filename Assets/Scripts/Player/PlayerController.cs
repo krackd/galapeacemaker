@@ -179,13 +179,13 @@ public class PlayerController : MonoBehaviour {
 		float h = Input.GetAxis("Horizontal");
 
 		Vector3 velocity = rb.velocity;
-		float moveSpeed = v > 0 ? MoveForce : MoveForce * 0.25f;
+		float moveSpeed = v > 0 ? MoveForce : MoveForce;
 		Vector3 verticalForce = transform.up * v * moveSpeed;
 		Vector3 horizontalForce = transform.right * h * StrafeForce;
 		Vector3 force = verticalForce + horizontalForce;
 		rb.AddForce(force * Time.deltaTime * 1000f);
 		velocity.x = Mathf.Clamp(velocity.x, -MaxStrafeVelocity, MaxStrafeVelocity);
-		velocity.y = Mathf.Clamp(velocity.y, -MaxMoveVelocity * 0.5f, MaxMoveVelocity);
+		velocity.y = Mathf.Clamp(velocity.y, -MaxMoveVelocity, MaxMoveVelocity);
 		rb.velocity = velocity;
 	}
 
