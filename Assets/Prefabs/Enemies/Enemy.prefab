@@ -2453,7 +2453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FragmentsPrefab: {fileID: 1537569267022130, guid: 13ca049ded8b1df45a122c8595405824,
     type: 2}
-  FragmentsScale: {x: 0.7, y: 0.7, z: 0.7}
+  FragmentsScale: {x: 0.5, y: 0.5, z: 0.5}
   NbFragments: 1
   AddOffset: 0
   FragmentOffset: {x: 0, y: 0, z: 0}

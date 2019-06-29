@@ -29,7 +29,7 @@ public class Health : MonoBehaviour {
 
 	public void Hurt(int amount)
 	{
-		if (IsInvincible)
+		if (IsInvincible || IsDead)
 		{
 			return;
 		}

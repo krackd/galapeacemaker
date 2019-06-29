@@ -41,7 +41,7 @@ public class DestroyOnDeath : MonoBehaviour {
 		float angle = Random.Range(0, 2 * Mathf.PI);
 		Vector3 dir = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0);
 
-		fragment.transform.localScale = FragmentsScale;
+		fragment.transform.localScale = mult(fragment.transform.localScale, FragmentsScale);
 		fragment.transform.position = transform.position;
 
 		if (AddOffset)
@@ -55,6 +55,11 @@ public class DestroyOnDeath : MonoBehaviour {
 		{
 			DoExpulsion(fragment, dir);
 		}
+	}
+
+	private Vector3 mult(Vector3 a, Vector3 b)
+	{
+		return new Vector3(a.x * b.x, a.y * b.y, a.z * b.z);
 	}
 
 	private void DoExpulsion(GameObject fragment, Vector3 dir)
