@@ -407,7 +407,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  MaxHP: 200
+  MaxHP: 200000
   IsInvincible: 0
 --- !u!135 &135110541799845966
 SphereCollider:
