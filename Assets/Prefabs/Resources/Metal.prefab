@@ -36,6 +36,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4526403270336162}
+  - component: {fileID: 135273155286550296}
+  - component: {fileID: 114313417671936864}
   m_Layer: 0
   m_Name: Metal
   m_TagString: Untagged
@@ -149,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1308178680182586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.378592, y: 11.553878, z: 3.5912328}
+  m_LocalPosition: {x: 3.2, y: 28.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4841776728153834}
@@ -333,6 +335,19 @@ MonoBehaviour:
   UseTrigger: 1
   Tag: Player
   ToDestroy: {fileID: 1308178680182586}
+--- !u!114 &114313417671936864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308178680182586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a209c88216ca2e438e6c80e9612869b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetTag: Player
+  MoveSpeed: 0.0015
 --- !u!114 &114669161534453902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -371,6 +386,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135273155286550296
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308178680182586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20.99
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135464462213547114
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -381,7 +408,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.2722828
+  m_Radius: 4
   m_Center: {x: 0.006352001, y: 0, z: 0}
 --- !u!198 &198156271343232478
 ParticleSystem:
