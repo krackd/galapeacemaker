@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 114946694676606150}
   - component: {fileID: 114929385040821190}
   - component: {fileID: 54872379880064056}
+  - component: {fileID: 114122140626771788}
   m_Layer: 0
   m_Name: EnemyDebris
   m_TagString: Untagged
@@ -327,6 +328,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.288131, y: 0.3, z: 5.734551}
   m_Center: {x: -1.6440642, y: 0.00000068469706, z: 1.1081022}
+--- !u!114 &114122140626771788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537569267022130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ade53d5f9f30804685b50236bb85541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FragmentsPrefab:
+  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
+  FragmentsScale: {x: 1, y: 1, z: 1}
+  NbFragments: 2
+  ForceZ: 1
+  PositionZ: 0
+  AddOffset: 1
+  FragmentOffset: {x: 2, y: 2, z: 0}
+  Expulse: 0
+  FragmentExpulsionForce: 2
 --- !u!114 &114929385040821190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,11 +389,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289a1e2b0e48dc41a721b68447ac755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FragmentsPrefab:
-  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
-  FragmentsScale: {x: 0.01, y: 0.01, z: 0.01}
-  NbFragments: 1
-  AddOffset: 0
-  FragmentOffset: {x: 0, y: 0, z: 0}
-  Expulse: 0
-  FragmentExpulsionForce: 2

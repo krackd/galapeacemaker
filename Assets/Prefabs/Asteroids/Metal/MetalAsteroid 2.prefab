@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114186240896437942}
   - component: {fileID: 114956084603772460}
   - component: {fileID: 114121398449736850}
+  - component: {fileID: 114657960828447374}
+  - component: {fileID: 114737336940184042}
   m_Layer: 0
   m_Name: MetalAsteroid 2
   m_TagString: Enemy
@@ -106,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1322251364929166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.4, y: 52.5, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 4266471045015156}
@@ -332,15 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289a1e2b0e48dc41a721b68447ac755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FragmentsPrefab:
-  - {fileID: 1581393556867372, guid: 394c924db436bb244965005e8f8cd837, type: 2}
-  - {fileID: 1638385940398694, guid: d884a1ff04887c443aaecf7c24cbf5a1, type: 2}
-  FragmentsScale: {x: 1, y: 1, z: 1}
-  NbFragments: 2
-  AddOffset: 1
-  FragmentOffset: {x: 2, y: 2, z: 0}
-  Expulse: 1
-  FragmentExpulsionForce: 10000
 --- !u!114 &114186240896437942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,6 +346,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NbDestuctions: 2
+--- !u!114 &114657960828447374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322251364929166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ade53d5f9f30804685b50236bb85541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FragmentsPrefab:
+  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
+  FragmentsScale: {x: 1, y: 1, z: 1}
+  NbFragments: 10
+  ForceZ: 1
+  PositionZ: 0
+  NormalizeDirection: 0
+  AddOffset: 1
+  FragmentOffset: {x: 6, y: 6, z: 0}
+  Expulse: 0
+  FragmentExpulsionForce: 2
+--- !u!114 &114737336940184042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322251364929166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ade53d5f9f30804685b50236bb85541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FragmentsPrefab:
+  - {fileID: 1581393556867372, guid: 394c924db436bb244965005e8f8cd837, type: 2}
+  - {fileID: 1638385940398694, guid: d884a1ff04887c443aaecf7c24cbf5a1, type: 2}
+  FragmentsScale: {x: 1, y: 1, z: 1}
+  NbFragments: 3
+  ForceZ: 1
+  PositionZ: 0
+  NormalizeDirection: 1
+  AddOffset: 1
+  FragmentOffset: {x: 7, y: 7, z: 0}
+  Expulse: 1
+  FragmentExpulsionForce: 10000
 --- !u!114 &114956084603772460
 MonoBehaviour:
   m_ObjectHideFlags: 1

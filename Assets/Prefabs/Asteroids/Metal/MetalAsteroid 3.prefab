@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 114164413227956792}
   - component: {fileID: 114745257611499916}
   - component: {fileID: 114541429648885896}
+  - component: {fileID: 114771120260879232}
   m_Layer: 0
   m_Name: MetalAsteroid 3
   m_TagString: Enemy
@@ -148,8 +149,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638385940398694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -52, y: 55.31889, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4324336101301794}
   m_Father: {fileID: 0}
@@ -344,14 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289a1e2b0e48dc41a721b68447ac755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FragmentsPrefab:
-  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
-  FragmentsScale: {x: 1, y: 1, z: 1}
-  NbFragments: 1
-  AddOffset: 0
-  FragmentOffset: {x: 0, y: 0, z: 0}
-  Expulse: 0
-  FragmentExpulsionForce: 2
 --- !u!114 &114745257611499916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -370,6 +363,28 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   MaxHP: 100
   IsInvincible: 0
+--- !u!114 &114771120260879232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638385940398694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ade53d5f9f30804685b50236bb85541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FragmentsPrefab:
+  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
+  FragmentsScale: {x: 1, y: 1, z: 1}
+  NbFragments: 3
+  ForceZ: 1
+  PositionZ: 0
+  NormalizeDirection: 0
+  AddOffset: 1
+  FragmentOffset: {x: 4, y: 4, z: 0}
+  Expulse: 0
+  FragmentExpulsionForce: 2
 --- !u!135 &135204507950868018
 SphereCollider:
   m_ObjectHideFlags: 1

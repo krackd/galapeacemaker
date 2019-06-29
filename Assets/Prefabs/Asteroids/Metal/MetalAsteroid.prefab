@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 114868052942287886}
   - component: {fileID: 114687281915931628}
   - component: {fileID: 114480938388729830}
+  - component: {fileID: 114182872707689250}
   m_Layer: 0
   m_Name: MetalAsteroid
   m_TagString: Enemy
@@ -119,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1581393556867372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.7138672, y: 56.29421, z: -156.63321}
+  m_LocalPosition: {x: -80.4, y: 71.3, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4447649243782456}
@@ -309,6 +310,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &114182872707689250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581393556867372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ade53d5f9f30804685b50236bb85541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FragmentsPrefab:
+  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
+  FragmentsScale: {x: 1, y: 1, z: 1}
+  NbFragments: 5
+  ForceZ: 1
+  PositionZ: 0
+  NormalizeDirection: 0
+  AddOffset: 1
+  FragmentOffset: {x: 5, y: 5, z: 0}
+  Expulse: 0
+  FragmentExpulsionForce: 2
 --- !u!114 &114433221686194680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,14 +355,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289a1e2b0e48dc41a721b68447ac755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FragmentsPrefab:
-  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
-  FragmentsScale: {x: 1, y: 1, z: 1}
-  NbFragments: 1
-  AddOffset: 0
-  FragmentOffset: {x: 0, y: 0, z: 0}
-  Expulse: 0
-  FragmentExpulsionForce: 2
 --- !u!114 &114687281915931628
 MonoBehaviour:
   m_ObjectHideFlags: 1
