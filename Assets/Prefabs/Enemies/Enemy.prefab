@@ -1063,7 +1063,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789032609361994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.8, y: 43.5, z: 0}
+  m_LocalPosition: {x: -222.9, y: 43.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4593123288777596}
@@ -2424,18 +2424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnDeath:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114772049099109428}
-        m_MethodName: OnDeath
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   MaxHP: 100
@@ -2451,8 +2440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289a1e2b0e48dc41a721b68447ac755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FragmentsPrefab: {fileID: 1537569267022130, guid: 13ca049ded8b1df45a122c8595405824,
-    type: 2}
+  FragmentsPrefab:
+  - {fileID: 1537569267022130, guid: 13ca049ded8b1df45a122c8595405824, type: 2}
   FragmentsScale: {x: 0.5, y: 0.5, z: 0.5}
   NbFragments: 1
   AddOffset: 0

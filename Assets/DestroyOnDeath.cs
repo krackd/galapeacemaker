@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Health))]
 public class DestroyOnDeath : MonoBehaviour {
 
 	[Header("Fragments")]
-	public GameObject FragmentsPrefab;
+	public GameObject[] FragmentsPrefab;
 	public Vector3 FragmentsScale = Vector3.one;
 	public int NbFragments = 1;
 
@@ -15,6 +16,12 @@ public class DestroyOnDeath : MonoBehaviour {
 	public bool Expulse = false;
 	public float FragmentExpulsionForce = 2f;
 
+	private void Start()
+	{
+		Health health = GetComponent<Health>();
+		health.OnDeath.AddListener(OnDeath);
+	}
+
 	public void OnDeath()
 	{
 		CreateAllFragments();
@@ -23,7 +30,7 @@ public class DestroyOnDeath : MonoBehaviour {
 
 	private void CreateAllFragments()
 	{
-		if (FragmentsPrefab == null)
+		if (FragmentsPrefab.Length <= 0)
 		{
 			return;
 		}
@@ -36,7 +43,8 @@ public class DestroyOnDeath : MonoBehaviour {
 
 	private void CreateOneFragments()
 	{
-		GameObject fragment = Instantiate(FragmentsPrefab);
+		int fi = Random.Range(0, FragmentsPrefab.Length - 1);
+		GameObject fragment = Instantiate(FragmentsPrefab[fi]);
 
 		float angle = Random.Range(0, 2 * Mathf.PI);
 		Vector3 dir = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0);
@@ -53,6 +61,9 @@ public class DestroyOnDeath : MonoBehaviour {
 
 		if (Expulse)
 		{
+			//ExpulseAtStart comp = fragment.AddComponent<ExpulseAtStart>();
+			//comp.FragmentExpulsionForce = FragmentExpulsionForce;
+			//comp.ExpulsionDirection = dir;
 			DoExpulsion(fragment, dir);
 		}
 	}

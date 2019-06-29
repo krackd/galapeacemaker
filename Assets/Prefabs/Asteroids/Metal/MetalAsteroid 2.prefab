@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 54338179542055660}
   - component: {fileID: 114102069044559568}
   - component: {fileID: 114186240896437942}
+  - component: {fileID: 114956084603772460}
+  - component: {fileID: 114121398449736850}
   m_Layer: 0
   m_Name: MetalAsteroid 2
   m_TagString: Enemy
@@ -105,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 1322251364929166}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 4266471045015156}
   m_Father: {fileID: 0}
@@ -319,6 +321,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tumble: 0.25
+--- !u!114 &114121398449736850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322251364929166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9289a1e2b0e48dc41a721b68447ac755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FragmentsPrefab:
+  - {fileID: 1581393556867372, guid: 394c924db436bb244965005e8f8cd837, type: 2}
+  - {fileID: 1638385940398694, guid: d884a1ff04887c443aaecf7c24cbf5a1, type: 2}
+  FragmentsScale: {x: 1, y: 1, z: 1}
+  NbFragments: 2
+  AddOffset: 1
+  FragmentOffset: {x: 2, y: 2, z: 0}
+  Expulse: 1
+  FragmentExpulsionForce: 10000
 --- !u!114 &114186240896437942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,10 +352,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0197ac33d9031e44c835c4ad7944d6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HpPerScaleXUnit: 25
-  NbFragments: 2
-  MinScale: 2
-  FragmentExpulsionForce: 2
+  NbDestuctions: 2
+--- !u!114 &114956084603772460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322251364929166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4132e4126f03540a8cf6842825645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxHP: 200
+  IsInvincible: 0
 --- !u!135 &135110541799845966
 SphereCollider:
   m_ObjectHideFlags: 1

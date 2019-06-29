@@ -90,6 +90,8 @@ GameObject:
   - component: {fileID: 54020658643430700}
   - component: {fileID: 114078060594775606}
   - component: {fileID: 114164413227956792}
+  - component: {fileID: 114745257611499916}
+  - component: {fileID: 114541429648885896}
   m_Layer: 0
   m_Name: MetalAsteroid 3
   m_TagString: Enemy
@@ -330,10 +332,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0197ac33d9031e44c835c4ad7944d6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HpPerScaleXUnit: 25
-  NbFragments: 2
-  MinScale: 2
+  NbDestuctions: 2
+--- !u!114 &114541429648885896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638385940398694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9289a1e2b0e48dc41a721b68447ac755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FragmentsPrefab:
+  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
+  FragmentsScale: {x: 1, y: 1, z: 1}
+  NbFragments: 1
+  AddOffset: 0
+  FragmentOffset: {x: 0, y: 0, z: 0}
+  Expulse: 0
   FragmentExpulsionForce: 2
+--- !u!114 &114745257611499916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638385940398694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4132e4126f03540a8cf6842825645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxHP: 100
+  IsInvincible: 0
 --- !u!135 &135204507950868018
 SphereCollider:
   m_ObjectHideFlags: 1

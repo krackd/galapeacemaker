@@ -73,6 +73,8 @@ GameObject:
   - component: {fileID: 54745840178752372}
   - component: {fileID: 114433221686194680}
   - component: {fileID: 114868052942287886}
+  - component: {fileID: 114687281915931628}
+  - component: {fileID: 114480938388729830}
   m_Layer: 0
   m_Name: MetalAsteroid
   m_TagString: Enemy
@@ -117,8 +119,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1581393556867372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.7138672, y: 56.29421, z: -156.63321}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4447649243782456}
   m_Father: {fileID: 0}
@@ -319,6 +321,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tumble: 0.25
+--- !u!114 &114480938388729830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581393556867372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9289a1e2b0e48dc41a721b68447ac755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FragmentsPrefab:
+  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
+  FragmentsScale: {x: 1, y: 1, z: 1}
+  NbFragments: 1
+  AddOffset: 0
+  FragmentOffset: {x: 0, y: 0, z: 0}
+  Expulse: 0
+  FragmentExpulsionForce: 2
+--- !u!114 &114687281915931628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581393556867372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4132e4126f03540a8cf6842825645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxHP: 100
+  IsInvincible: 0
 --- !u!114 &114868052942287886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,10 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0197ac33d9031e44c835c4ad7944d6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HpPerScaleXUnit: 25
-  NbFragments: 2
-  MinScale: 2
-  FragmentExpulsionForce: 2
+  NbDestuctions: 2
 --- !u!135 &135909312716587968
 SphereCollider:
   m_ObjectHideFlags: 1
