@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 114929385040821190}
   - component: {fileID: 54872379880064056}
   - component: {fileID: 114122140626771788}
+  - component: {fileID: 114169742541640006}
   m_Layer: 0
   m_Name: EnemyDebris
   m_TagString: Untagged
@@ -345,10 +346,24 @@ MonoBehaviour:
   NbFragments: 2
   ForceZ: 1
   PositionZ: 0
+  NormalizeDirection: 0
   AddOffset: 1
   FragmentOffset: {x: 2, y: 2, z: 0}
   Expulse: 0
   FragmentExpulsionForce: 2
+--- !u!114 &114169742541640006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537569267022130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f3cfcd46ce5c1f4b817a5fcb67bc34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImpactPrefab: {fileID: 1341809707433014, guid: e936655d2966ecc41b903ca80b8fea60,
+    type: 2}
 --- !u!114 &114929385040821190
 MonoBehaviour:
   m_ObjectHideFlags: 1

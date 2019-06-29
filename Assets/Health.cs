@@ -20,7 +20,19 @@ public class Health : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Projectile projectile = other.gameObject.GetComponent<Projectile>();
+		GameObject otherGo = other.gameObject;
+		OnCollision(otherGo);
+	}
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		GameObject otherGo = collision.gameObject;
+		OnCollision(otherGo);
+	}
+
+	private void OnCollision(GameObject otherGo)
+	{
+		Projectile projectile = otherGo.GetComponent<Projectile>();
 		if (projectile != null)
 		{
 			Hurt(projectile.Damage);

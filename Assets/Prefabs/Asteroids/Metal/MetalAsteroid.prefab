@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 114687281915931628}
   - component: {fileID: 114480938388729830}
   - component: {fileID: 114182872707689250}
+  - component: {fileID: 114633280243488038}
   m_Layer: 0
   m_Name: MetalAsteroid
   m_TagString: Enemy
@@ -302,7 +303,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1581393556867372}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 10000
   m_Drag: 1
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -355,6 +356,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289a1e2b0e48dc41a721b68447ac755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114633280243488038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581393556867372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f3cfcd46ce5c1f4b817a5fcb67bc34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImpactPrefab: {fileID: 1762148916509510, guid: 5f6a19dd3f237f44cb292d69014128f1,
+    type: 2}
+  ProjectileTag: Projectile
 --- !u!114 &114687281915931628
 MonoBehaviour:
   m_ObjectHideFlags: 1
