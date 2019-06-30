@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 114541429648885896}
   - component: {fileID: 114771120260879232}
   - component: {fileID: 114640253648282578}
+  - component: {fileID: 114794414453790290}
   m_Layer: 0
   m_Name: MetalAsteroid 3
   m_TagString: Enemy
@@ -359,7 +360,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ImpactPrefab: {fileID: 1762148916509510, guid: 5f6a19dd3f237f44cb292d69014128f1,
     type: 2}
-  ProjectileTag: Projectile
 --- !u!114 &114745257611499916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -400,6 +400,21 @@ MonoBehaviour:
   FragmentOffset: {x: 4, y: 4, z: 0}
   Expulse: 0
   FragmentExpulsionForce: 2
+--- !u!114 &114794414453790290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638385940398694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ef34947abc5f8408fb67a57b126ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectPrefab: {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee,
+    type: 2}
+  ExpulsionForce: 1000
+  PercentChanceOfSpwan: 20
 --- !u!135 &135204507950868018
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114657960828447374}
   - component: {fileID: 114737336940184042}
   - component: {fileID: 114655614942785338}
+  - component: {fileID: 114488905095619046}
   m_Layer: 0
   m_Name: MetalAsteroid 2
   m_TagString: Enemy
@@ -531,6 +532,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NbDestuctions: 2
+--- !u!114 &114488905095619046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322251364929166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ef34947abc5f8408fb67a57b126ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectPrefab: {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee,
+    type: 2}
+  ExpulsionForce: 1000
+  PercentChanceOfSpwan: 20
 --- !u!114 &114655614942785338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -544,7 +560,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ImpactPrefab: {fileID: 1762148916509510, guid: 5f6a19dd3f237f44cb292d69014128f1,
     type: 2}
-  ProjectileTag: Projectile
 --- !u!114 &114657960828447374
 MonoBehaviour:
   m_ObjectHideFlags: 1

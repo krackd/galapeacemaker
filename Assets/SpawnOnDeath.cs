@@ -49,10 +49,10 @@ public class SpawnOnDeath : MonoBehaviour {
 
 	private void CreateOneFragments()
 	{
-		int fi = Random.Range(0, FragmentsPrefab.Length - 1);
+		int fi = Random.Range(0, FragmentsPrefab.Length);
 		GameObject fragment = Instantiate(FragmentsPrefab[fi]);
 
-		float angle = Random.Range(0, 2 * Mathf.PI);
+		//float angle = Random.Range(0, 2 * Mathf.PI);
 		//Vector3 dir = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0);
 		Vector3 dir = Random.insideUnitSphere;
 		dir.z = 0;
