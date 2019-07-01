@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4878211486824968}
   - component: {fileID: 33929218291616366}
   - component: {fileID: 23752098857090126}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid3_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4324336101301794}
   - component: {fileID: 205153387848594128}
   - component: {fileID: 135204507950868018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid_LODGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4328242800674850}
   - component: {fileID: 33694923372713680}
   - component: {fileID: 23276406784589454}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid3_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4423936603895820}
   - component: {fileID: 33530248261286228}
   - component: {fileID: 23959556912519514}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid3_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 114771120260879232}
   - component: {fileID: 114640253648282578}
   - component: {fileID: 114794414453790290}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MetalAsteroid 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -376,8 +376,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  MaxHP: 50000
+  MaxHP: 50
   IsInvincible: 0
+  ProjectileDamageFactor: 0.25
+  BeamDamageFactor: 5
 --- !u!114 &114771120260879232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -413,8 +415,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectPrefab: {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee,
     type: 2}
-  ExpulsionForce: 1000
-  PercentChanceOfSpwan: 20
+  ExpulsionForce: 1500
+  ProjectilePercentChanceOfSpwan: 0.25
+  BeamPercentChanceOfSpwan: 2
 --- !u!135 &135204507950868018
 SphereCollider:
   m_ObjectHideFlags: 1

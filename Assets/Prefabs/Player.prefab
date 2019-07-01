@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4880350070460946}
   - component: {fileID: 33962592030400066}
   - component: {fileID: 23138563957066490}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MUTT Left Back Suspension_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4044943349530930}
   - component: {fileID: 33535697453004552}
   - component: {fileID: 23556327655975848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: plane_elevator_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4096296704008834}
   - component: {fileID: 114466901503486470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 4540019301948748}
   - component: {fileID: 33884795433853346}
   - component: {fileID: 23136877800157496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4578768527755652}
   - component: {fileID: 33828909713306742}
   - component: {fileID: 23880043575903988}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MUTT Taillights_o
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4280721512299554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spaceship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4401327196771126}
   - component: {fileID: 33345531223174284}
   - component: {fileID: 23956254908490362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 4448887544536898}
   - component: {fileID: 33587062443524366}
   - component: {fileID: 23496548430856152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CLASSIC Rear Tyre_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 4619992885737950}
   - component: {fileID: 33104551335517180}
   - component: {fileID: 23205283232941910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TRACKER Rear Rim_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 4555093539781664}
   - component: {fileID: 33665398659500584}
   - component: {fileID: 23894591338419194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 4121250724123298}
   - component: {fileID: 33076517592186608}
   - component: {fileID: 23023878762840552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BOBBER Steering_o
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 4669193690740476}
   - component: {fileID: 33468241304559266}
   - component: {fileID: 23966838881653154}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Front Right Brake Calliper_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 4134977699785892}
   - component: {fileID: 33095139446959788}
   - component: {fileID: 23585977531086676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 4828989175218732}
   - component: {fileID: 33148635933002284}
   - component: {fileID: 23022684682437272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,9 +256,27 @@ GameObject:
   - component: {fileID: 4307461611379538}
   - component: {fileID: 33658448110349722}
   - component: {fileID: 23581730889109190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 10
   m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1175413005828620
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4808575331455064}
+  - component: {fileID: 33269262573637456}
+  - component: {fileID: 23979007635410256}
+  - component: {fileID: 136415975731257236}
+  m_Layer: 9
+  m_Name: BeamModel
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +291,7 @@ GameObject:
   - component: {fileID: 4308248418503828}
   - component: {fileID: 33024456726919290}
   - component: {fileID: 23575245604064572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4155007561513006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ship-gpm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +323,7 @@ GameObject:
   - component: {fileID: 4488924267541428}
   - component: {fileID: 33365005919371920}
   - component: {fileID: 23009723071137042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +340,7 @@ GameObject:
   - component: {fileID: 4006932355334254}
   - component: {fileID: 33321591189987330}
   - component: {fileID: 23682422080280094}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MUTT Front Brakes_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +357,7 @@ GameObject:
   - component: {fileID: 4242141136665614}
   - component: {fileID: 33044832477180742}
   - component: {fileID: 23360287929513322}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MUTT Front Mudguard_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4790535515608078}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Motorcycle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +389,7 @@ GameObject:
   - component: {fileID: 4567441541812796}
   - component: {fileID: 33129177419659750}
   - component: {fileID: 23559597154581370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CLASSIC Right Front Suspension_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +406,7 @@ GameObject:
   - component: {fileID: 4456887675740744}
   - component: {fileID: 33655869560453088}
   - component: {fileID: 23670647291276668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +423,7 @@ GameObject:
   - component: {fileID: 4589120860376596}
   - component: {fileID: 33879250370844906}
   - component: {fileID: 23334959194798030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +440,7 @@ GameObject:
   - component: {fileID: 4231044137802608}
   - component: {fileID: 33151685430992628}
   - component: {fileID: 23594898725993088}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CLASSIC Engine_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +457,7 @@ GameObject:
   - component: {fileID: 4518791046176780}
   - component: {fileID: 33948037596915540}
   - component: {fileID: 23481294102752388}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rear Brake Calliper_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +474,7 @@ GameObject:
   - component: {fileID: 4382448901270488}
   - component: {fileID: 33084141363729398}
   - component: {fileID: 23003006915148930}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SCRAMBLER Seat_o
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +491,7 @@ GameObject:
   - component: {fileID: 4455810561686522}
   - component: {fileID: 33441044269972316}
   - component: {fileID: 23965388803682278}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rear Axle_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +508,7 @@ GameObject:
   - component: {fileID: 4306271578890610}
   - component: {fileID: 33044894763908716}
   - component: {fileID: 23314778402978208}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +525,7 @@ GameObject:
   - component: {fileID: 4891534400661294}
   - component: {fileID: 33520544948217926}
   - component: {fileID: 23817953557705320}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +542,7 @@ GameObject:
   - component: {fileID: 4149859991614760}
   - component: {fileID: 33711695976295742}
   - component: {fileID: 23410824100610890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stand Up_o
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +559,7 @@ GameObject:
   - component: {fileID: 4201121178957928}
   - component: {fileID: 33303826466407796}
   - component: {fileID: 23763932919073000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Battery_o
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +578,7 @@ GameObject:
   - component: {fileID: 65877494107792618}
   - component: {fileID: 54658490357539676}
   - component: {fileID: 114126597011518912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -577,7 +595,7 @@ GameObject:
   - component: {fileID: 4301543055914388}
   - component: {fileID: 33842492262776474}
   - component: {fileID: 23905397276612578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CLASSIC Left Front Suspension_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +612,7 @@ GameObject:
   - component: {fileID: 4057102843635464}
   - component: {fileID: 33194732955432468}
   - component: {fileID: 23377075082099390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Front Axle_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +629,7 @@ GameObject:
   - component: {fileID: 4429643309434486}
   - component: {fileID: 33420641255172632}
   - component: {fileID: 23231575551782398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +646,7 @@ GameObject:
   - component: {fileID: 4828882130941074}
   - component: {fileID: 33113036935390646}
   - component: {fileID: 23183865049353566}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CLASSIC Front Tyre_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +663,7 @@ GameObject:
   - component: {fileID: 4838171676695724}
   - component: {fileID: 33163205009285124}
   - component: {fileID: 23527567050412474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Front Left Brake Calliper_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +680,7 @@ GameObject:
   - component: {fileID: 4307745028473158}
   - component: {fileID: 33685769526973822}
   - component: {fileID: 23392695240575276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +697,7 @@ GameObject:
   - component: {fileID: 4038979166392626}
   - component: {fileID: 33346552844724032}
   - component: {fileID: 23255212203057318}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,7 +714,7 @@ GameObject:
   - component: {fileID: 4962263713801574}
   - component: {fileID: 33649854824799722}
   - component: {fileID: 23307224882894428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SCRAMBLER Right exhaust_o
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4398773475873542}
   - component: {fileID: 114547527755895368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +747,7 @@ GameObject:
   - component: {fileID: 4067381638600652}
   - component: {fileID: 33923001745839026}
   - component: {fileID: 23696035171881220}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: plane_elevator_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,10 +764,27 @@ GameObject:
   - component: {fileID: 4575137430332556}
   - component: {fileID: 33352158081908706}
   - component: {fileID: 23701969839330422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1629185374247332
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4647297803608994}
+  - component: {fileID: 95079029438675788}
+  - component: {fileID: 114979582670394778}
+  m_Layer: 9
+  m_Name: Beam
+  m_TagString: Projectile
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -761,7 +796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4430400711217644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Brat Stand up Set
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +813,7 @@ GameObject:
   - component: {fileID: 4333360430925580}
   - component: {fileID: 33957232790509064}
   - component: {fileID: 23431876429026230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MUTT Headlights_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +830,7 @@ GameObject:
   - component: {fileID: 4855622279579530}
   - component: {fileID: 33942191583503890}
   - component: {fileID: 23543425130114308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BOBBER Chassis_o
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,7 +846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4099203612287390}
   - component: {fileID: 114872286632962172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,8 +863,24 @@ GameObject:
   - component: {fileID: 4647089143873254}
   - component: {fileID: 33261787175646832}
   - component: {fileID: 23658463897953394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1852791648854166
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4931170005692930}
+  - component: {fileID: 114421688040939944}
+  m_Layer: 9
+  m_Name: BeamWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,7 +896,7 @@ GameObject:
   - component: {fileID: 4841434011766936}
   - component: {fileID: 33048004656961726}
   - component: {fileID: 23985060411333628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TRACKER Left exhaust_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +913,7 @@ GameObject:
   - component: {fileID: 4979626869829698}
   - component: {fileID: 33237858327817252}
   - component: {fileID: 23272496861873012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MUTT Rear Brakes_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,7 +930,7 @@ GameObject:
   - component: {fileID: 4534433871702864}
   - component: {fileID: 33645636599760592}
   - component: {fileID: 23772047606394068}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BOBBER Front Rim_o
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -896,7 +947,7 @@ GameObject:
   - component: {fileID: 4183902073292920}
   - component: {fileID: 33944662554237348}
   - component: {fileID: 23530565995005628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TRACKER Gastank_a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -913,7 +964,7 @@ GameObject:
   - component: {fileID: 4789274943647336}
   - component: {fileID: 33784583575187728}
   - component: {fileID: 23485435268448282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +981,7 @@ GameObject:
   - component: {fileID: 4545754661390738}
   - component: {fileID: 33834738935498056}
   - component: {fileID: 23057626958877584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MUTT Right Back Suspension_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,7 +998,7 @@ GameObject:
   - component: {fileID: 4590009287440304}
   - component: {fileID: 33270243008231074}
   - component: {fileID: 23225752788300810}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MUTT Rear Mudguard_n
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +1015,7 @@ GameObject:
   - component: {fileID: 4980128852640750}
   - component: {fileID: 33843019871622936}
   - component: {fileID: 23225671212205878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (0.0, 0.0, 0.0) 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1200,6 +1251,7 @@ Transform:
   - {fileID: 4155007561513006}
   - {fileID: 4398773475873542}
   - {fileID: 4096296704008834}
+  - {fileID: 4931170005692930}
   m_Father: {fileID: 4520224036064592}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1597,6 +1649,20 @@ Transform:
   m_Father: {fileID: 4155007561513006}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4647297803608994
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629185374247332}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4808575331455064}
+  m_Father: {fileID: 4931170005692930}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4669193690740476
 Transform:
   m_ObjectHideFlags: 1
@@ -1637,6 +1703,19 @@ Transform:
   - {fileID: 4099203612287390}
   m_Father: {fileID: 4520224036064592}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4808575331455064
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1175413005828620}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6e-14, y: 14.84, z: 0}
+  m_LocalScale: {x: 0.57, y: 15, z: 0.6}
+  m_Children: []
+  m_Father: {fileID: 4647297803608994}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4828882130941074
 Transform:
@@ -1728,6 +1807,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4155007561513006}
   m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4931170005692930
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852791648854166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4647297803608994}
+  m_Father: {fileID: 4280721512299554}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4962263713801574
 Transform:
@@ -3485,6 +3578,41 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &23979007635410256
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1175413005828620}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: e2f9470524cc4ed4084bac73bc6ca884, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23985060411333628
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -3632,6 +3760,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1833379884646092}
   m_Mesh: {fileID: 4300006, guid: b220121326957064dad50617389969a6, type: 3}
+--- !u!33 &33269262573637456
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1175413005828620}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33270243008231074
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -3890,6 +4025,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.5514812, y: 4.1851053, z: 1.2030807}
   m_Center: {x: 0.06473541, y: -2.9649978, z: -0.2369279}
+--- !u!95 &95079029438675788
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629185374247332}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6fe8a6d3e6f5274a8aa22875063eb47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114041427606159624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3932,6 +4085,19 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   MaxHP: 100
   IsInvincible: 0
+  ProjectileDamageFactor: 1
+  BeamDamageFactor: 1
+--- !u!114 &114421688040939944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852791648854166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91e98e5bf012ba469655ae2b9aa47a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114466901503486470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3977,3 +4143,28 @@ MonoBehaviour:
     type: 2}
   Damage: 10
   FireCoolDown: 0.15
+--- !u!114 &114979582670394778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1629185374247332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7cde4b3fb49cb7468dbff12592a2277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 30
+--- !u!136 &136415975731257236
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1175413005828620}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

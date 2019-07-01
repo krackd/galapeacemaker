@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4571927335936960}
   - component: {fileID: 33776677799365060}
   - component: {fileID: 23283368977582098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4447649243782456}
   - component: {fileID: 205816046580278742}
   - component: {fileID: 135909312716587968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid_LODGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4147192965858246}
   - component: {fileID: 33162353128622398}
   - component: {fileID: 23398989716695834}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 114182872707689250}
   - component: {fileID: 114633280243488038}
   - component: {fileID: 114163925435827528}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MetalAsteroid
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4637836579698176}
   - component: {fileID: 33178427597701450}
   - component: {fileID: 23181498440600888}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,8 +325,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectPrefab: {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee,
     type: 2}
-  ExpulsionForce: 1000
-  PercentChanceOfSpwan: 20
+  ExpulsionForce: 1500
+  ProjectilePercentChanceOfSpwan: 0.25
+  BeamPercentChanceOfSpwan: 2
 --- !u!114 &114182872707689250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -401,8 +402,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  MaxHP: 50000
+  MaxHP: 50
   IsInvincible: 0
+  ProjectileDamageFactor: 0.25
+  BeamDamageFactor: 5
 --- !u!114 &114868052942287886
 MonoBehaviour:
   m_ObjectHideFlags: 1

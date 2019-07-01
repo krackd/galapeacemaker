@@ -5,8 +5,13 @@ public class Health : MonoBehaviour {
 
 	public UnityEvent OnDeath;
 
+	[Header("Health")]
 	public int MaxHP = 100;
 	public bool IsInvincible = false;
+
+	[Header("Modifiers")]
+	public float ProjectileDamageFactor = 1f;
+	public float BeamDamageFactor = 1f;
 
 	public bool IsDead { get { return hp <= 0; } }
 
@@ -20,14 +25,22 @@ public class Health : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		GameObject otherGo = other.gameObject;
-		OnCollision(otherGo);
+		OnCollision(other.gameObject);
+	}
+
+	private void OnTriggerStay(Collider other)
+	{
+		OnCollision(other.gameObject);
 	}
 
 	private void OnCollisionEnter(Collision collision)
 	{
-		GameObject otherGo = collision.gameObject;
-		OnCollision(otherGo);
+		OnCollision(collision.gameObject);
+	}
+
+	private void OnCollisionStay(Collision collision)
+	{
+		OnCollision(collision.gameObject);
 	}
 
 	private void OnCollision(GameObject otherGo)
@@ -35,7 +48,14 @@ public class Health : MonoBehaviour {
 		Projectile projectile = otherGo.GetComponent<Projectile>();
 		if (projectile != null)
 		{
-			Hurt(projectile.Damage);
+			Hurt((int)(projectile.Damage * ProjectileDamageFactor));
+		}
+
+		Beam beam = otherGo.GetComponentInParent<Beam>();
+		if (beam != null && beam.CanHurt)
+		{
+			Hurt((int)(beam.Damage * BeamDamageFactor));
+			beam.StartCooldown();
 		}
 	}
 

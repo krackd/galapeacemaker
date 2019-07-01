@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4044312970340464}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114737336940184042}
   - component: {fileID: 114655614942785338}
   - component: {fileID: 114488905095619046}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MetalAsteroid 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 4284397251643468}
   - component: {fileID: 33835227787489030}
   - component: {fileID: 23477254415441810}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid2_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4281108966747946}
   - component: {fileID: 65658884473692602}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4452389154176574}
   - component: {fileID: 33801472922169694}
   - component: {fileID: 23784599492406158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid2_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4266471045015156}
   - component: {fileID: 205086622074009938}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid_LODGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4133281960014558}
   - component: {fileID: 136207496651940240}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4290071522471568}
   - component: {fileID: 33322746212963270}
   - component: {fileID: 23243303122666934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: test_asteroid2_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4559915471639838}
   - component: {fileID: 65084691526298238}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4941402901408170}
   - component: {fileID: 65806313056202496}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,8 +545,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectPrefab: {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee,
     type: 2}
-  ExpulsionForce: 1000
-  PercentChanceOfSpwan: 20
+  ExpulsionForce: 1500
+  ProjectilePercentChanceOfSpwan: 0.25
+  BeamPercentChanceOfSpwan: 2
 --- !u!114 &114655614942785338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -621,8 +622,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  MaxHP: 200000
+  MaxHP: 20000
   IsInvincible: 0
+  ProjectileDamageFactor: 0.25
+  BeamDamageFactor: 5
 --- !u!136 &136207496651940240
 CapsuleCollider:
   m_ObjectHideFlags: 1
