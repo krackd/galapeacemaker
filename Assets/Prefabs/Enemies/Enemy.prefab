@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 54954810197974734}
   - component: {fileID: 114007217038180142}
   - component: {fileID: 114829818734636476}
+  - component: {fileID: 114904067470896656}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2477,3 +2478,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ImpactPrefab: {fileID: 1341809707433014, guid: e936655d2966ecc41b903ca80b8fea60,
     type: 2}
+--- !u!114 &114904067470896656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789032609361994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ade53d5f9f30804685b50236bb85541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FragmentsPrefab:
+  - {fileID: 1146255602467046, guid: 1356e74dd94c02b4295414840311cf78, type: 2}
+  - {fileID: 1647611698231042, guid: e571cc87ffccf414e85ae96e96843d0a, type: 2}
+  FragmentsScale: {x: 1, y: 1, z: 1}
+  NbFragments: 1
+  ForceZ: 1
+  PositionZ: 0
+  NormalizeDirection: 0
+  AddOffset: 1
+  FragmentOffset: {x: 0, y: 0, z: -1}
+  Expulse: 0
+  FragmentExpulsionForce: 2

@@ -73,7 +73,7 @@ public class SpawnOnDeath : MonoBehaviour {
 		if (AddOffset)
 		{
 			Vector3 eo = FragmentOffset;
-			Vector3 offset = new Vector3(dir.x * eo.x, dir.y * eo.y, dir.z * eo.z);
+			Vector3 offset = new Vector3(dir.x * eo.x, dir.y * eo.y, eo.z);
 			fragment.transform.position += offset;
 		}
 
