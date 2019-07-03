@@ -2454,6 +2454,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   MaxHP: 100
   IsInvincible: 0
+  ProjectileDamageFactor: 1
+  BeamDamageFactor: 1
 --- !u!114 &114772049099109428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2490,8 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FragmentsPrefab:
-  - {fileID: 1146255602467046, guid: 1356e74dd94c02b4295414840311cf78, type: 2}
-  - {fileID: 1647611698231042, guid: e571cc87ffccf414e85ae96e96843d0a, type: 2}
+  - {fileID: 1291509671106844, guid: d02591ff711381544b22239f8f13e3ac, type: 2}
   FragmentsScale: {x: 1, y: 1, z: 1}
   NbFragments: 1
   ForceZ: 1

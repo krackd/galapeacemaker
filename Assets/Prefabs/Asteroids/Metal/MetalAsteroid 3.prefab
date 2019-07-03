@@ -416,7 +416,7 @@ MonoBehaviour:
   ObjectPrefab: {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee,
     type: 2}
   ExpulsionForce: 1500
-  ProjectilePercentChanceOfSpwan: 0.25
+  ProjectilePercentChanceOfSpwan: 0
   BeamPercentChanceOfSpwan: 2
 --- !u!135 &135204507950868018
 SphereCollider:

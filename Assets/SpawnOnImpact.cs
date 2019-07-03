@@ -1,10 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class SpawnOnImpact : MonoBehaviour {
 
 	public GameObject ObjectPrefab;
 	public float ExpulsionForce = 2f;
 
+	public bool IsRandom = false;
+
+	[Header("Periodic")]
+	public float SpawnCooldown = 1f;
+	private bool canSpawn = true;
+
+	[Header("Random")]
 	[Range(0, 100)]
 	public float ProjectilePercentChanceOfSpwan = 10f;
 
@@ -14,14 +22,16 @@ public class SpawnOnImpact : MonoBehaviour {
 	private void OnCollisionEnter(Collision collision)
 	{
 		Projectile projectile = collision.gameObject.GetComponent<Projectile>();
-		if (projectile != null)
+		ContactPoint hit = collision.contacts[0];
+		Vector3 position = hit.point;
+		Vector3 direction = -hit.normal;
+		if (projectile != null && IsRandom)
 		{
-			float rand = GetRand();
-			if (rand <= ProjectilePercentChanceOfSpwan)
-			{
-				ContactPoint hit = collision.contacts[0];
-				CreateObject(hit.point, -hit.normal);
-			}
+			onRandom(position, direction, ProjectilePercentChanceOfSpwan);
+		}
+		else if (projectile != null)
+		{
+			onPeriodic(position, direction);
 		}
 	}
 
@@ -30,13 +40,18 @@ public class SpawnOnImpact : MonoBehaviour {
 		Beam beam = other.gameObject.GetComponentInParent<Beam>();
 		if (beam != null)
 		{
-			float rand = Random.value * 100f;
-			if (rand <= BeamPercentChanceOfSpwan)
+			RaycastHit? hit = beam.GetHit(gameObject);
+			if (hit.HasValue)
 			{
-				RaycastHit? hit = beam.GetHit(gameObject);
-				if (hit.HasValue)
+				Vector3 position = hit.Value.point;
+				Vector3 direction = hit.Value.normal;
+				if (IsRandom)
 				{
-					CreateObject(hit.Value.point, hit.Value.normal);
+					onRandom(position, direction, BeamPercentChanceOfSpwan);
+				}
+				else
+				{
+					onPeriodic(position, direction);
 				}
 			}
 		}
@@ -56,5 +71,35 @@ public class SpawnOnImpact : MonoBehaviour {
 	private static float GetRand()
 	{
 		return Random.value * 100f;
+	}
+
+	private void DoSpawn(Vector3 position, Vector3 direction)
+	{
+		CreateObject(position, direction);
+	}
+
+	private void onRandom(Vector3 position, Vector3 direction, float percentChance)
+	{
+		float rand = GetRand();
+		if (rand <= percentChance)
+		{
+			DoSpawn(position, direction);
+		}
+	}
+
+	private void onPeriodic(Vector3 position, Vector3 direction)
+	{
+		if (canSpawn)
+		{
+			DoSpawn(position, direction);
+			StartCoroutine(spawnCooldown(SpawnCooldown));
+		}
+	}
+
+	private IEnumerator spawnCooldown(float cd)
+	{
+		canSpawn = false;
+		yield return new WaitForSeconds(cd);
+		canSpawn = true;
 	}
 }

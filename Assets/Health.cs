@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour {
 
 	public UnityEvent OnDeath;
+	public UnityEvent OnResurect;
 
 	[Header("Health")]
 	public int MaxHP = 100;
@@ -48,15 +49,12 @@ public class Health : MonoBehaviour {
 		Projectile projectile = otherGo.GetComponent<Projectile>();
 		if (projectile != null)
 		{
-			Debug.Log("Projectile hurts");
 			Hurt((int)(projectile.Damage * ProjectileDamageFactor));
 		}
 
 		Beam beam = otherGo.GetComponentInParent<Beam>();
 		if (beam != null && beam.CanHurt)
 		{
-			Debug.Log("Beam hurts");
-			Debug.Log(gameObject.name + " hp: " + hp);
 			Hurt((int)(beam.Damage * BeamDamageFactor));
 			beam.StartCooldown();
 		}
@@ -66,7 +64,6 @@ public class Health : MonoBehaviour {
 	{
 		if (IsInvincible || IsDead)
 		{
-			Debug.Log("IsInvincible: " + IsInvincible + " / IsDead: " + IsDead);
 			return;
 		}
 
@@ -80,6 +77,11 @@ public class Health : MonoBehaviour {
 
 	public void Heal(int amount)
 	{
+		if (IsDead)
+		{
+			return;
+		}
+
 		hp = clamp(hp + amount);
 	}
 
@@ -88,7 +90,13 @@ public class Health : MonoBehaviour {
 		OnDeath.Invoke();
 	}
 
-	private int clamp(int value)
+	public void Resurect()
+	{
+		hp = MaxHP / 2;
+		OnResurect.Invoke();
+	}
+
+		private int clamp(int value)
 	{
 		return hp = (int)Mathf.Clamp(value, 0, MaxHP);
 	}
