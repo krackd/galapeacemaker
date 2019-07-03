@@ -625,7 +625,7 @@ MonoBehaviour:
   MaxHP: 20000
   IsInvincible: 0
   ProjectileDamageFactor: 0.25
-  BeamDamageFactor: 5
+  BeamDamageFactor: 2
 --- !u!136 &136207496651940240
 CapsuleCollider:
   m_ObjectHideFlags: 1

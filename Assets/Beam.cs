@@ -10,7 +10,7 @@ public class Beam : MonoBehaviour {
 
 	public bool CanHurt { get { return canhurt; } }
 	private bool canhurt = true;
-
+	
 	public RaycastHit? GetHit(GameObject go)
 	{
 		Ray ray = new Ray(transform.position, transform.up);

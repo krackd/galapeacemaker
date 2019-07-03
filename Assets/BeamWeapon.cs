@@ -22,7 +22,7 @@ public class BeamWeapon : MonoBehaviour {
 		if (Input.GetButtonDown("Fire2") && beam != null && anim != null)
 		{
 			beam.gameObject.SetActive(true);
-			anim.SetTrigger("Spawn");
+			beam.StartCooldown();
 		}
 		else if (Input.GetButtonUp("Fire2") && beam != null)
 		{

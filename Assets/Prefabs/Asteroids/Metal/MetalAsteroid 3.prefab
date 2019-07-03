@@ -376,10 +376,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  MaxHP: 50
+  MaxHP: 500
   IsInvincible: 0
   ProjectileDamageFactor: 0.25
-  BeamDamageFactor: 5
+  BeamDamageFactor: 2
 --- !u!114 &114771120260879232
 MonoBehaviour:
   m_ObjectHideFlags: 1

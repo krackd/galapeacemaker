@@ -48,12 +48,15 @@ public class Health : MonoBehaviour {
 		Projectile projectile = otherGo.GetComponent<Projectile>();
 		if (projectile != null)
 		{
+			Debug.Log("Projectile hurts");
 			Hurt((int)(projectile.Damage * ProjectileDamageFactor));
 		}
 
 		Beam beam = otherGo.GetComponentInParent<Beam>();
 		if (beam != null && beam.CanHurt)
 		{
+			Debug.Log("Beam hurts");
+			Debug.Log(gameObject.name + " hp: " + hp);
 			Hurt((int)(beam.Damage * BeamDamageFactor));
 			beam.StartCooldown();
 		}
@@ -63,6 +66,7 @@ public class Health : MonoBehaviour {
 	{
 		if (IsInvincible || IsDead)
 		{
+			Debug.Log("IsInvincible: " + IsInvincible + " / IsDead: " + IsDead);
 			return;
 		}
 
