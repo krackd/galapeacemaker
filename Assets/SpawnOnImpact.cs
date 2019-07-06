@@ -6,16 +6,14 @@ public class SpawnOnImpact : MonoBehaviour {
 	public GameObject ObjectPrefab;
 	public float ExpulsionForce = 2f;
 
-	public bool IsRandom = false;
-
-	[Header("Periodic")]
-	public float SpawnCooldown = 1f;
-	private bool canSpawn = true;
-
-	[Header("Random")]
+	[Header("Projectile")]
 	[Range(0, 100)]
 	public float ProjectilePercentChanceOfSpwan = 10f;
 
+	[Header("Beam")]
+	public bool IsBeamRandom = false;
+	public float SpawnCooldown = 1f;
+	private bool canSpawn = true;
 	[Range(0, 100)]
 	public float BeamPercentChanceOfSpwan = 20f;
 
@@ -25,14 +23,14 @@ public class SpawnOnImpact : MonoBehaviour {
 		ContactPoint hit = collision.contacts[0];
 		Vector3 position = hit.point;
 		Vector3 direction = -hit.normal;
-		if (projectile != null && IsRandom)
+		if (projectile != null)
 		{
 			onRandom(position, direction, ProjectilePercentChanceOfSpwan);
 		}
-		else if (projectile != null)
-		{
-			onPeriodic(position, direction);
-		}
+		//else if (projectile != null)
+		//{
+		//	onPeriodic(position, direction);
+		//}
 	}
 
 	private void OnTriggerStay(Collider other)
@@ -45,7 +43,7 @@ public class SpawnOnImpact : MonoBehaviour {
 			{
 				Vector3 position = hit.Value.point;
 				Vector3 direction = hit.Value.normal;
-				if (IsRandom)
+				if (IsBeamRandom)
 				{
 					onRandom(position, direction, BeamPercentChanceOfSpwan);
 				}
