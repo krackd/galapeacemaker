@@ -526,6 +526,7 @@ GameObject:
   - component: {fileID: 114007217038180142}
   - component: {fileID: 114829818734636476}
   - component: {fileID: 114904067470896656}
+  - component: {fileID: 114262937951929430}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2436,6 +2437,26 @@ MonoBehaviour:
   FragmentOffset: {x: 0, y: 0, z: 0}
   Expulse: 0
   FragmentExpulsionForce: 2
+--- !u!114 &114262937951929430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789032609361994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ef34947abc5f8408fb67a57b126ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectPrefab: {fileID: 1308178680182586, guid: bd42b1ce23ce3774a88cf0ce11bb523a,
+    type: 2}
+  NbResources: 500
+  IsUnlimited: 1
+  ExpulsionForce: 1500
+  ProjectilePercentChanceOfSpwan: 0
+  IsBeamRandom: 0
+  SpawnCooldown: 1
+  BeamPercentChanceOfSpwan: 20
 --- !u!114 &114702269879791094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2452,10 +2473,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnResurect:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   MaxHP: 100
   IsInvincible: 0
   ProjectileDamageFactor: 1
-  BeamDamageFactor: 1
+  BeamDamageFactor: 2
 --- !u!114 &114772049099109428
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -323,10 +323,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ef34947abc5f8408fb67a57b126ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectPrefab: {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee,
+  ObjectPrefab: {fileID: 1638385940398694, guid: 63f8d5fc43be9fc4fbe06c75416e34c8,
     type: 2}
+  NbResources: 200
+  IsUnlimited: 0
   ExpulsionForce: 1500
   ProjectilePercentChanceOfSpwan: 0
+  IsBeamRandom: 0
+  SpawnCooldown: 1
   BeamPercentChanceOfSpwan: 2
 --- !u!114 &114182872707689250
 MonoBehaviour:
@@ -340,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FragmentsPrefab:
-  - {fileID: 1308178680182586, guid: 9f70d4596b0998c4d93a3b3232f3e3ee, type: 2}
+  - {fileID: 1638385940398694, guid: 63f8d5fc43be9fc4fbe06c75416e34c8, type: 2}
   FragmentsScale: {x: 1, y: 1, z: 1}
   NbFragments: 5
   ForceZ: 1
@@ -398,6 +402,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnResurect:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

@@ -4,11 +4,16 @@ using UnityEngine;
 public class SpawnOnImpact : MonoBehaviour {
 
 	public GameObject ObjectPrefab;
-	public float ExpulsionForce = 2f;
+	public int NbResources = 500;
+	private int currentNb = 0;
+	public bool IsUnlimited = true;
+	public bool IsDepleted { get { return !IsUnlimited && currentNb <= 0; } }
+
+	public float ExpulsionForce = 1500f;
 
 	[Header("Projectile")]
 	[Range(0, 100)]
-	public float ProjectilePercentChanceOfSpwan = 10f;
+	public float ProjectilePercentChanceOfSpwan = 0f;
 
 	[Header("Beam")]
 	public bool IsBeamRandom = false;
@@ -17,7 +22,22 @@ public class SpawnOnImpact : MonoBehaviour {
 	[Range(0, 100)]
 	public float BeamPercentChanceOfSpwan = 20f;
 
+	private void Start()
+	{
+		currentNb = NbResources;
+	}
+
 	private void OnCollisionEnter(Collision collision)
+	{
+		if (IsDepleted)
+		{
+			return;
+		}
+
+		OnProjectileImpact(collision);
+	}
+
+	private void OnProjectileImpact(Collision collision)
 	{
 		Projectile projectile = collision.gameObject.GetComponent<Projectile>();
 		ContactPoint hit = collision.contacts[0];
@@ -27,13 +47,19 @@ public class SpawnOnImpact : MonoBehaviour {
 		{
 			onRandom(position, direction, ProjectilePercentChanceOfSpwan);
 		}
-		//else if (projectile != null)
-		//{
-		//	onPeriodic(position, direction);
-		//}
 	}
 
 	private void OnTriggerStay(Collider other)
+	{
+		if (IsDepleted)
+		{
+			return;
+		}
+
+		OnBeamImpact(other);
+	}
+
+	private void OnBeamImpact(Collider other)
 	{
 		Beam beam = other.gameObject.GetComponentInParent<Beam>();
 		if (beam != null)
@@ -64,6 +90,7 @@ public class SpawnOnImpact : MonoBehaviour {
 		{
 			rb.AddForce(dir * ExpulsionForce);
 		}
+		currentNb--;
 	}
 
 	private static float GetRand()
