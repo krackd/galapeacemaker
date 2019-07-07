@@ -20,7 +20,7 @@ public class SpawnOnImpact : MonoBehaviour {
 	public float SpawnCooldown = 1f;
 	private bool canSpawn = true;
 	[Range(0, 100)]
-	public float BeamPercentChanceOfSpwan = 20f;
+	public float BeamPercentChanceOfSpwan = 2f;
 
 	private void Start()
 	{
