@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 114685287676135552}
   m_Layer: 10
   m_Name: test_asteroid_LODGroup
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4114682919779028}
   m_Layer: 0
   m_Name: PowerUpContainerWhite
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 54905988267053880}
   m_Layer: 10
   m_Name: MetalResource
-  m_TagString: Enemy
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

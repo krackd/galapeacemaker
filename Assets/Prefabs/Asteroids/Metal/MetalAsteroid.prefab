@@ -328,9 +328,9 @@ MonoBehaviour:
   NbResources: 200
   IsUnlimited: 0
   ExpulsionForce: 1500
-  ProjectilePercentChanceOfSpwan: 0
+  ProjectilePercentChanceOfSpwan: 1
   IsBeamRandom: 0
-  SpawnCooldown: 1
+  SpawnCooldown: 0.5
   BeamPercentChanceOfSpwan: 2
 --- !u!114 &114182872707689250
 MonoBehaviour:
