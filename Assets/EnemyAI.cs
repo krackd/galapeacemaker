@@ -61,7 +61,7 @@ public class EnemyAI : MonoBehaviour {
 		pos *= area.Radius;
 		pos += area.transform.position;
 		pos.z = transform.position.z;
-		Debug.Log("randPosition = " + pos);
+		//Debug.Log("randPosition = " + pos);
 		return pos;
 	}
 

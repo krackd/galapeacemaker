@@ -65,26 +65,57 @@ public class EnemyPathfinding : MonoBehaviour {
 
 	void Turn()
 	{
-		Vector3 diff = target - transform.position;
-		Quaternion rotation = Quaternion.FromToRotation(transform.forward, diff);
+		Vector3 dir = (target - transform.position).normalized;
+		float angle = Angle(transform.up, dir, transform.forward);
+		//Quaternion rotation = Quaternion.FromToRotation(transform.forward, diff);
+		Quaternion rotation = Quaternion.AngleAxis(angle, transform.forward);
 		transform.rotation = Quaternion.Slerp(transform.rotation, rotation, RotationalDamp * Time.deltaTime);
+		//transform.rotation = rotation;
 	}
 
 	private void UpdateVelocity()
 	{
+		//Vector3 dir = transform.up;
 		Vector3 dir = target - transform.position;
+		dir.z = 0;
 		dir.Normalize();
-		float v = dir.y;
-		float h = dir.x;
+		//float v = dir.y;
+		//float h = dir.x;
 
-		Vector3 velocity = rb.velocity;
-		float moveSpeed = v > 0 ? MoveForce : MoveForce;
-		Vector3 verticalForce = transform.up * v * moveSpeed;
-		Vector3 horizontalForce = transform.right * h * StrafeForce;
-		Vector3 force = verticalForce + horizontalForce;
-		rb.AddForce(force * Time.deltaTime * 1000f);
-		velocity.x = Mathf.Clamp(velocity.x, -MaxStrafeVelocity, MaxStrafeVelocity);
-		velocity.y = Mathf.Clamp(velocity.y, -MaxMoveVelocity, MaxMoveVelocity);
-		rb.velocity = velocity;
+		//Vector3 velocity = rb.velocity;
+		//float moveSpeed = v > 0 ? MoveForce : MoveForce;
+		//Vector3 verticalForce = transform.up * v * moveSpeed;
+		//Vector3 horizontalForce = transform.right * h * StrafeForce;
+		//Vector3 force = verticalForce + horizontalForce;
+		rb.AddForce(dir * MoveForce * Time.deltaTime * 1000f);
+		//velocity.x = Mathf.Clamp(velocity.x, -MaxStrafeVelocity, MaxStrafeVelocity);
+		//velocity.y = Mathf.Clamp(velocity.y, -MaxMoveVelocity, MaxMoveVelocity);
+		//rb.velocity = velocity;
+	}
+
+	float SignedAngleBetween(Vector3 a, Vector3 b, Vector3 n)
+	{
+		// angle in [0,180]
+		float angle = Vector3.Angle(a, b);
+		float sign = Mathf.Sign(Vector3.Dot(n, Vector3.Cross(a, b)));
+
+		// angle in [-179,180]
+		float signedAngle = angle * sign;
+
+		// angle in [0,360] (not used but included here for completeness)
+		//float angle360 =  (signed_angle + 180) % 360;
+
+		return signedAngle;
+	}
+
+	float Angle(Vector3 from, Vector3 to, Vector3 n)
+	{
+		return Quaternion.FromToRotation(n, to - from).eulerAngles.z;
+	}
+
+	private void OnDrawGizmosSelected()
+	{
+		Gizmos.color = Color.red;
+		Gizmos.DrawSphere(target, 2);
 	}
 }

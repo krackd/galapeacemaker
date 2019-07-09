@@ -2474,9 +2474,8 @@ MonoBehaviour:
   StrafeForce: 5
   MaxStrafeVelocity: 50
   MaxMoveVelocity: 50
-  RotationalDamp: 0.5
-  Target: {x: 0, y: 0, z: 0}
-  TargetThresold: 1
+  RotationalDamp: 5
+  TargetThresold: 3
 --- !u!114 &114638628344005976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2488,8 +2487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1e442147752b942966004a5a219ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: {fileID: 0}
-  pathfinding: {fileID: 0}
 --- !u!114 &114702269879791094
 MonoBehaviour:
   m_ObjectHideFlags: 1
